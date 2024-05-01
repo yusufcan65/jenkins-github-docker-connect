@@ -6,8 +6,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/yusuf")
 public class yusufcontroller {
 
-
-    @GetMapping("{/listele}")
+    @GetMapping()
     public String  listelle(){
         return "yusuf can";
     }
