@@ -7,8 +7,8 @@ pipeline {
         stage('Build Maven') {
             steps {
                 checkout scmGit(
-                    branches: [[name: '*/main']],
-                    userRemoteConfigs: [[url: 'https://github.com/yusufcan65/newrepo-dev']]
+                    branches: [[name: '*/master']],
+                    userRemoteConfigs: [[url: 'https://github.com/yusufcan65/yudududududu.git']]
                 )
                 bat 'mvn clean install'
             }
