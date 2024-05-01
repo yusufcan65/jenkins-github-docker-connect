@@ -10,15 +10,15 @@ pipeline {
                     branches: [[name: '*/main']],
                     userRemoteConfigs: [[url: 'https://github.com/yusufcan65/yudududududu.git']]
                 )
-                bat 'mvn clean install'
+                sh 'mvn clean install'
             }
         }
         stage('Stop and Remove Existing Container') {
                                              steps {
                                                  script {
                                                    // Varolan container'ı durdur ve sil
-                                                            bat 'docker stop demo-container '
-                                                            bat 'docker rm demo-container'
+                                                            sh 'docker stop demo-container '
+                                                            sh 'docker rm demo-container'
                                                         }
                                                    }
                                         }
