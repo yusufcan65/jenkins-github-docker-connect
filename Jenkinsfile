@@ -8,7 +8,7 @@ pipeline {
             steps {
                 checkout scmGit(
                     branches: [[name: '*/main']],
-                    userRemoteConfigs: [[url: 'https://github.com/serkan-can-eyvaz/yudududududu']]
+                    userRemoteConfigs: [[url: 'https://github.com/yusufcan65/yudududududu']]
                 )
                 bat 'mvn clean install'
             }
