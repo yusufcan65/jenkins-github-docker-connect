@@ -32,7 +32,7 @@ pipeline {
         stage('Run Docker Container') {
                     steps {
                         script {
-                            docker.image("demo/app:${env.BUILD_NUMBER}").run("-d -p 6530:6530 --name demo-container")
+                            docker.image("demo/app:${env.BUILD_NUMBER}").run("-d -p 9090:9090 --name demo-container")
                         }
                     }
                 }
