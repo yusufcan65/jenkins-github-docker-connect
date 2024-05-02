@@ -8,6 +8,6 @@ public class yusufcontroller {
 
     @GetMapping()
     public String  listelle(){
-        return "yusuf can";
+        return "yusuf jhhjoho can";
     }
 }
