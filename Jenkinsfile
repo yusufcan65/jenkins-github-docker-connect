@@ -8,11 +8,20 @@ pipeline {
             steps {
                 checkout scmGit(
                     branches: [[name: '*/main']],
-                    userRemoteConfigs: [[url: 'https://github.com/yusufcan65/jenkins-github-docker-connect.git']]
+                    userRemoteConfigs: [[url: 'https://github.com/yusufcan65/yudududududu.git']]
                 )
                 bat 'mvn clean install'
             }
         }
+        stage('Stop and Remove Existing Container') {
+                                             steps {
+                                                 script {
+                                                   // Varolan container'ı durdur ve sil
+                                                            bat 'docker stop demo-container '
+                                                            bat 'docker rm demo-container'
+                                                        }
+                                                   }
+                                        }
 
         stage('Build docker image'){
             steps{
