@@ -10,7 +10,7 @@ pipeline {
                     branches: [[name: '*/main']],
                     userRemoteConfigs: [[url: 'https://github.com/yusufcan65/jenkins-github-docker-connect.git']]
                 )
-                bat 'mvn clean install'
+
             }
         }
 
