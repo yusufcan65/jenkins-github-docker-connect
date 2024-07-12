@@ -18,14 +18,14 @@ pipeline {
         stage('Build docker image'){
             steps{
                 script{
-                    docker.build("demo12:${env.BUILD_NUMBER}")
+                    docker.build("yusuf65:${env.BUILD_NUMBER}")
                 }
             }
         }
         stage('Push image to Hub'){
             steps{
                 script{
-                    docker.image("demo12:${env.BUILD_NUMBER}").run("-d -p 6530:5050 --name demo-container")
+                    docker.image("yusuf65:${env.BUILD_NUMBER}").run("-d -p 6530:5050 --name demo-container")
                 }
             }
   }
